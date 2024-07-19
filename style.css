@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    color: rgba(78, 141, 207);
+    font-family: Verdana;
+    font-size: 6em;
+    text-align: center;
+}
+
+h2 {
+    color: rgba(78, 141, 207, 0.6);
+    font-family: Verdana;
+    font-size: 2em;
+    text-align: center;
+}
+
+p {
+    color: Gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 16px;
+    background-color: #E3E3E3;
+    padding: 8px;
+    margin-top: 7px;
+    display: block;
+    color: #4a4a4a;
+}
