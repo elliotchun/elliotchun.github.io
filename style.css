@@ -1,76 +1,180 @@
+﻿:root {
+	--header-color: #0083b3;
+	--text-color: black;
+	--primary-color: #002244;
+	--primary-color-complemenent: #255799;
+	--secondary-color: #f0ab00;
+	--secondary-color-complement: #fecc07;
+	--primary-font: "Arial Black", Gadget, sans-serif;
+	scroll-behavior: smooth !important;
+	overflow-wrap: break-word;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
 body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    font-size: 16px;
-    min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 16px;
+	min-height: 100vh;
+	background-color: var(--primary-color);
 }
 
 h1 {
-    color: #255799;
-    font-family: Verdana;
-    font-size: 6rem;
-    text-align: center;
+	color: var(--header-color);
+	font-family: var(--primary-font);
+	font-size: 6rem;
+	text-align: center;
 }
 
 h2 {
-    color: #0083b3;
-    font-family: Verdana;
-    font-size: 2rem;
-    text-align: center;
+	color: var(--header-color);
+	font-family: var(--primary-font);
+	font-size: 2rem;
+	text-align: center;
 }
 
 h3 {
-    color: #0083b3;
-    font-family: Verdana;
-    font-size: 2rem;
-    text-align: center;
+	color: var(--header-color);
+	font-family: var(--primary-font);
+	font-size: 24px;
+	text-align: center;
 }
 
 p {
-    color: #c6beb5;
-    font-family: "Arial Black", Gadget, sans-serif;
-    font-size: 16px;
+	color: var(--text-color);
+	font-family: var(--primary-font);
+	font-size: 16px;
 }
 
-#top-row {
-    padding-top: 1rem;
-    background-color: #fecc07;
-    height: 20rem;
+#home {
+	padding-top: 1rem;
+	background-color: var(--primary-color);
+	height: 100vh;
 }
 
-#top-row-decorator {
-    padding-top: 1rem;
-    background-color: #f0ab00;
-    height: fit-content;
+#name-header {
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	top: 30%;
 }
 
-#mid-row {
-    padding-top: 1rem;
-    background-color: #255799;
-    height: fit-content;
+#scroll-indicator {
+	display: flex;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	align-items: center;
+	justify-content: center;
+	animation-duration: 1.5s;
+	animation-name: slight-hover;
+	animation-iteration-count: infinite;
 }
 
-#bottom-row {
-    padding-top: 1rem;
-    background-color: #002244;
-    flex: 1;
+.content-container {
+	padding-left: 7%;
+	padding-right: 7%;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 }
 
 .project-container {
-    display: flex;
-    justify-content: space-evenly;
-    column-count: 3;
-    flex-wrap: wrap;
+	display: flex;
+	justify-content: space-evenly;
+	column-count: 3;
+	flex-wrap: wrap;
 }
 
-.project-descriptor {
-    background-color: white;
-    padding: 1rem;
-    margin: 1rem;
-    font-size: 1rem;
+.description-container {
+	background-color: white;
+	padding: 1rem;
+	margin: 1rem;
+	font-size: 1rem;
+	max-width: 600px;
+	border-radius: 5px;
+	box-shadow: 1px 1px 5px 0px #000000;
 }
 
-.project-descriptor i {
-    font-size: 2rem;
+#experience {
+	background-color: var(--secondary-color);
+	height: fit-content;
+}
+
+#projects {
+	background-color: var(--secondary-color-complement);
+	height: fit-content;
+}
+
+#contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-self: center;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	background-color: var(--primary-color);
+}
+
+/* Credit: Mozilla. MDN Web Docs, Address Page */
+a[href^='mailto']::before {
+	content: '📧 ';
+}
+
+a[href^='tel']::before {
+	content: '📞 ';
+}
+
+@media (max-width: 1200px) and (min-width: 768px) {
+	p {
+		font-size: 14px;
+	}
+
+	#name-header {
+		position: absolute;
+		top: 50%;
+		bottom: 50%;
+		left: 0;
+		right: 0;
+	}
+
+	section .description-container {
+		max-width: 40%;
+	}
+
+	.content-container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media (max-width: 768px) {
+	section .description-container {
+		width: 100%;
+	}
+
+	.content-container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@keyframes slight-hover {
+	0% {
+		transform: translate(0, -25%);
+	}
+
+	50% {
+		transform: translate(0, 0);
+	}
+
+	100% {
+		transform: translate(0, -25%);
+	}
 }

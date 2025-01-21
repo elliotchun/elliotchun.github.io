@@ -1,60 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <title>Elliot Chun's Website</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="icon.png" />
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+	<meta charset="utf-8">
+	<title>Elliot Chun's Website</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/png" href="icon.png">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
 <body>
-    <div id="top-row">
-        <h1 id="name-header">Elliot Chun</h1>
-    </div>
-    <div id="top-row-decorator">
-        <h2>Experience</h2>
-        <div class="project-descriptor">
-            <strong>Beckman Laser Institute</strong>
-            - As an intern at BLI, I worked on an OCT scanning application. Improved in-application display
-            from 10 fps to 100 fps.
-            <i class="devicon-cplusplus-plain"></i>
-        </div>
-        <div class="project-descriptor">
-            <strong>Ambient Studios</strong>
-            - During my internship at Ambient Studios, I improved a time-keeping application used by employees to clock
-            their working hours. Tweaked UI/UX and implemented modification of past hours.
-        </div>
-    </div>
-    <div id="mid-row">
-        <h2>Projects</h2>
-        <div class="project-container">
-            <div class="project-descriptor">
-                <strong>My Desktop Computer</strong>
-                - I built my own desktop computer in 2023.
-            </div>
-            <div class="project-descriptor">
-                <strong>JS-Lisp</strong>
-                - A Common Lisp interpreter I wrote in JavaScript.
-                <i class="devicon-javascript-plain"></i>
-            </div>
-            <div class="project-descriptor">
-                <strong>Digital Marketplace Analyzer</strong>
-                - A command line utility I use to browse digital goods on an online marketplace.
-                <i class="devicon-python-plain-wordmark"></i>
-            </div>
-            <div class="project-descriptor">
-                <strong>Clash of the Kings</strong>
-                <i class="devicon-html5-plain-wordmark"></i>
-                <i class="devicon-javascript-plain"></i>
-            </div>
-        </div>
-    </div>
-    <div id="bottom-row">
-        <h2>Contact</h2>
-
-    </div>
+	<section id="home" class="content-container">
+		<h1 id="name-header">Elliot Chun</h1>
+		<div id="scroll-indicator">
+			<a href="#experience" title="Skip to content">
+				<svg width="140" height="70" xmlns="http://www.w3.org/2000/svg" version="1.1">
+					<polyline points="20 20 70 50 120 20" stroke="white" stroke-width="20"
+							  stroke-linecap="round" fill="none" stroke-linejoin="round" />
+				</svg>
+			</a>
+		</div>
+	</section>
+	<section id="experience" class="content-container">
+		<h2>Experience</h2>
+		<div class="project-container">
+			<article class="description-container">
+				<h3>HiteJinro America</h3>
+				<p>As a freelance software engineer for HiteJinro, I developed a script which automated transcribing information from sales spreadsheets. This allowed employees to complete this task four times faster.</p>
+				<p>Technologies used: Bun (JavaScript Framework), Typescript</p>
+			</article>
+			<article class="description-container">
+				<h3>Beckman Laser Institute</h3>
+				<p>As an intern at BLI, I worked on an OCT scanning application. I improved in-application display from 10 fps to 100 fps. I also developed a Python application which was used to align these OCT scans.</p>
+				<p>Technologies used: Python, C++</p>
+			</article>
+			<article class="description-container">
+				<h3>Ambient Studios</h3>
+				<p>During my internship at Ambient Studios, I improved a mobile application used by employees to clock their hours. I tweaked UI/UX and implemented frontend and backend modifications. I added the ability for employees to modify/edit previously clocked hours.</p>
+			</article>
+		</div>
+	</section>
+	<section id="projects" class="content-container">
+		<h2>Projects</h2>
+		<div class="project-container">
+			<article class="description-container">
+				<h3>Video Game Item Wiki</h3>
+				<p>A web server that allows users to browse from the list of items inside a video game.</p>
+				<p>Technologies used: HTML, CSS, JavaScript, TypeScript, Bun, Elysia, AWS</p>
+				<p><a href="http://ec2-3-17-155-232.us-east-2.compute.amazonaws.com:8080">Link</a></p>
+			</article>
+			<article class="description-container">
+				<h3>Movie Database Web App</h3>
+				<p>A website which serves users information from a database of movies.</p>
+				<p>Technologies used: HTML, CSS, JavaScript, Java, AWS, Docker, Kubernetes</p>
+				<p><a href="https://hub.docker.com/r/eschun/cs122b-p5/">Source</a></p>
+			</article>
+			<article class="description-container">
+				<h3>My Desktop Computer</h3>
+				<p>I built my own desktop computer.</p>
+				<p>Technologies used: Linux (Arch)</p>
+				<p><a href="https://pcpartpicker.com/list/Cqptwg">Parts List</a></p>
+			</article>
+			<article class="description-container">
+				<h3>JS-Lisp</h3>
+				<p>A Common Lisp interpreter I wrote in JavaScript.</p>
+				<p>Technologies used: JavaScript</p>
+			</article>
+			<article class="description-container">
+				<h3>Digital Marketplace Analyzer</h3>
+				<p>A command line utility I use to browse digital goods on an online marketplace.</p>
+				<p>Technologies used: Python</p>
+				<p><a href="https://github.com/elliotchun/wf-market-tool">Source</a></p>
+			</article>
+			<article class="description-container">
+				<h3>Clash of the Kings</h3>
+				<p> A video game I developed in JavaScript.</p>
+				<p>Technologies used: HTML, CSS, JavaScript</p>
+			</article>
+		</div>
+	</section>
 </body>
 
 </html>
