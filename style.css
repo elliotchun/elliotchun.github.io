@@ -1,10 +1,10 @@
 ﻿:root {
-	--header-color: #0083b3;
+	--header-color: rgb(43, 3, 0);
 	--text-color: black;
-	--primary-color: #002244;
-	--primary-color-complemenent: #255799;
-	--secondary-color: #f0ab00;
-	--secondary-color-complement: #fecc07;
+	--primary-color: #f7ab6c;
+	--primary-color-complemenent: #6cb3f7;
+	--secondary-color: #f7d68c;
+	--secondary-color-complement: #d68c6c;
 	--primary-font: "Arial Black", Gadget, sans-serif;
 	scroll-behavior: smooth !important;
 	overflow-wrap: break-word;
