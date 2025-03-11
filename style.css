@@ -5,7 +5,8 @@
 	--primary-color-complemenent: #6cb3f7;
 	--secondary-color: #f7d68c;
 	--secondary-color-complement: #d68c6c;
-	--primary-font: "Arial Black", Gadget, sans-serif;
+	--header-font: "Arial Black", Gadget, sans-serif;
+	--primary-font: Arial, sans-serif;
 	scroll-behavior: smooth !important;
 	overflow-wrap: break-word;
 }
@@ -26,21 +27,21 @@ body {
 
 h1 {
 	color: var(--header-color);
-	font-family: var(--primary-font);
+	font-family: var(--header-font);
 	font-size: 6rem;
 	text-align: center;
 }
 
 h2 {
 	color: var(--header-color);
-	font-family: var(--primary-font);
+	font-family: var(--header-font);
 	font-size: 2rem;
 	text-align: center;
 }
 
 h3 {
 	color: var(--header-color);
-	font-family: var(--primary-font);
+	font-family: var(--header-font);
 	font-size: 24px;
 	text-align: center;
 }
