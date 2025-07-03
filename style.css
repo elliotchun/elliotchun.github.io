@@ -1,11 +1,12 @@
 ﻿:root {
-	--header-color: rgb(43, 3, 0);
-	--text-color: black;
+	
 	--primary-color: #f7ab6c;
-	--primary-color-complemenent: #6cb3f7;
-	--secondary-color: #f7d68c;
-	--secondary-color-complement: #d68c6c;
+	--primary-color-complemenent: #1c4ba3;
+	--secondary-color: #f49a56;
+	--secondary-color-complement: #f28945;
+	--header-color: var(--primary-color-complemenent);
 	--header-font: "Arial Black", Gadget, sans-serif;
+	--text-color: black;
 	--primary-font: Arial, sans-serif;
 	scroll-behavior: smooth !important;
 	overflow-wrap: break-word;
@@ -44,6 +45,7 @@ h3 {
 	font-family: var(--header-font);
 	font-size: 24px;
 	text-align: center;
+	padding-bottom: 0.5rem;
 }
 
 p {
@@ -92,21 +94,44 @@ media {
 }
 
 .project-container {
-	display: flex;
-	justify-content: space-evenly;
-	column-count: 3;
-	flex-wrap: wrap;
+	display: block;
 }
 
-.description-container {
+article {
 	background-color: white;
 	padding: 1rem;
 	margin: 1rem;
 	height: fit-content;
 	font-size: 1rem;
-	max-width: 600px;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
 	border-radius: 5px;
 	box-shadow: 1px 1px 5px 0px #000000;
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 1rem;
+}
+
+article media {
+	display: flex;
+	justify-content: center;
+	margin-right: 1rem;
+	box-shadow: 0px 0px 3px 0px #000000;
+	grid-column: 1;
+	align-self: center;
+}
+
+.description-container {
+	grid-column: 2;
+	align-self: center;
+}
+
+article > h1,
+article > h2,
+article > h3 {
+	grid-column: 1 / -1;
 }
 
 #experience {
@@ -151,7 +176,7 @@ a[href^='tel']::before {
 		right: 0;
 	}
 
-	section .description-container {
+	section article {
 		max-width: 40%;
 	}
 
@@ -162,7 +187,7 @@ a[href^='tel']::before {
 }
 
 @media (max-width: 768px) {
-	section .description-container {
+	section article {
 		width: 100%;
 	}
 
