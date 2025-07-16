@@ -1,9 +1,9 @@
 ﻿:root {
 	
-	--primary-color: #f7ab6c;
+	--primary-color: #e7e7e7;
 	--primary-color-complemenent: #1c4ba3;
-	--secondary-color: #f49a56;
-	--secondary-color-complement: #f28945;
+	--secondary-color: #d3d3d3;
+	--secondary-color-complement: #aaaaaa;
 	--header-color: var(--primary-color-complemenent);
 	--header-font: "Arial Black", Gadget, sans-serif;
 	--text-color: black;
@@ -174,10 +174,6 @@ a[href^='tel']::before {
 		bottom: 50%;
 		left: 0;
 		right: 0;
-	}
-
-	section article {
-		max-width: 40%;
 	}
 
 	.content-container {
