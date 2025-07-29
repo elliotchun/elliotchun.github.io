@@ -132,7 +132,15 @@ article img {
 }
 
 .image-carousel img {
-	animation: slide-from-right 0.5s ease-in-out;
+	animation: transform 0.5s ease-in-out;
+}
+
+img.slide-in {
+  animation: slide-from-right 0.5s ease-in-out;
+}
+
+img.slide-out {
+  animation: slide-to-left 0.5s ease-in-out;
 }
 
 .description-container {
@@ -219,5 +227,17 @@ a[href^='tel']::before {
 	100% {
 		transform: translateX(0);
 		opacity: 1;
+	}
+}
+
+@keyframes slide-to-left {
+	0% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateX(-100%);
+		opacity: 0;
 	}
 }
