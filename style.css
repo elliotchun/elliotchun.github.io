@@ -81,9 +81,7 @@ media {
 	bottom: 0;
 	align-items: center;
 	justify-content: center;
-	animation-duration: 1.5s;
-	animation-name: slight-hover;
-	animation-iteration-count: infinite;
+	animation: slight-hover 1.5s none infinite;
 }
 
 .content-container {
@@ -131,6 +129,10 @@ article img {
 
 .image-carousel {
 	grid-column: 1 / -1;
+}
+
+.image-carousel img {
+	animation: slide-from-right 0.5s ease-in-out;
 }
 
 .description-container {
@@ -205,5 +207,17 @@ a[href^='tel']::before {
 
 	100% {
 		transform: translate(0, -25%);
+	}
+}
+
+@keyframes slide-from-right {
+	0% {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0);
+		opacity: 1;
 	}
 }
