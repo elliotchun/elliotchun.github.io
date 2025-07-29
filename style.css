@@ -195,7 +195,24 @@ a[href^='tel']::before {
 
 @media (max-width: 768px) {
 	section article {
+		width: 90%;
+		display: block;
+		text-align: center;
+	}
+
+	.project-container {
 		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.description-container {
+		margin: 12px;
+	}
+
+	.image-carousel img {
+		max-width: 100%;
+		height: auto;
 	}
 
 	.content-container {
