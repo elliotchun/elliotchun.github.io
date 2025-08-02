@@ -148,6 +148,7 @@ article img {
 }
 
 .image-carousel img {
+	display: inline-block;
 	animation: transform 0.5s ease-in-out;
 }
 
