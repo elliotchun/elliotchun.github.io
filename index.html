@@ -7,39 +7,19 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="icon" type="image/png" href="icon.png">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<script src="carousel.js" defer></script>
+	<script src="scroll.js" defer></script>
 </head>
 <body>
 	<section id="home" class="content-container">
 		<h1 id="name-header">Elliot Chun</h1>
 		<div id="scroll-indicator">
-			<a href="#experience" title="Skip to content">
+			<a href="#projects" title="Skip to content">
 				<svg width="140" height="70" xmlns="http://www.w3.org/2000/svg" version="1.1">
 					<polyline points="20 20 70 50 120 20" stroke="white" stroke-width="20" stroke-linecap="round"
 						fill="none" stroke-linejoin="round">
 				</svg>
 			</a>
-		</div>
-	</section>
-	<section id="experience" class="content-container">
-		<h2>Experience</h2>
-		<div class="project-container">
-			<article>
-				<h3>Beckman Laser Institute</h3>
-				<div class="description-container">
-					<p>As an intern at BLI, I worked on an OCT scanning application. I improved in-application display from
-						10 fps to 100 fps. I also developed a Python application which was used to align these OCT scans.
-					</p>
-					<p>Technologies used: Python, C++</p>
-				</div>
-			</article>
-			<article>
-				<h3>Ambient Studios</h3>
-				<div class="description-container">
-					<p>During my internship at Ambient Studios, I improved a mobile application used by employees to clock
-						their hours. I tweaked UI/UX and implemented frontend and backend modifications. I added the ability
-						for employees to modify/edit previously clocked hours.</p>
-				</div>
-			</article>
 		</div>
 	</section>
 	<section id="projects" class="content-container">
@@ -55,13 +35,10 @@
 			</article>
 			<article>
 				<h3>CLIDE - Event Coordinating Mobile App</h3>
-				<media>
-					<iframe width="448" height="252" src="https://youtube.com/embed/tZ2Pot2H9f8"
-						title="YouTube video player" frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
-						alt="CLIDE App Demo Video"></iframe>
-				</media>
+				<div class="image-carousel">
+					<img src="assets/clide-home.png" alt="CLIDE App Home Screen">
+					<img src="assets/clide-new-event.png" alt="CLIDE App Home Screen">
+				</div>
 				<div class="description-container">
 					<p>A cross platform desktop/web/mobile app that helps users coordinate, market, and browse from a list of
 						upcoming campus activities. I envisioned the frontend design through wireframes and mockups before implementing
@@ -69,10 +46,7 @@
 					<p>Technologies used: Angular, HTML, CSS, JavaScript, TypeScript, Ionic, Figma, AWS</p>
 					<p><a href="https://github.com/elliotchun/clide-campus-groups">Source</a></p>
 				</div>
-				<div class="image-carousel">
-					<img src="assets/clide-home.png" alt="CLIDE App Home Screen">
-					<img src="assets/clide-new-event.png" alt="CLIDE App Home Screen">
-				</div>
+				
 			</article>
 			<article>
 				<h3>IMDB Movie Classification</h3>
@@ -159,8 +133,27 @@
 			</article>
 		</div>
 	</section>
+	<section id="experience" class="content-container">
+		<h2>Experience</h2>
+		<div class="project-container">
+			<article>
+				<h3>Beckman Laser Institute</h3>
+				<div class="description-container">
+					<p>As an intern at BLI, I worked on an OCT scanning application. I improved in-application display from
+						10 fps to 100 fps. I also developed a Python application which was used to align these OCT scans.
+					</p>
+					<p>Technologies used: Python, C++</p>
+				</div>
+			</article>
+			<article>
+				<h3>Ambient Studios</h3>
+				<div class="description-container">
+					<p>During my internship at Ambient Studios, I improved a mobile application used by employees to clock
+						their hours. I tweaked UI/UX and implemented frontend and backend modifications. I added the ability
+						for employees to modify/edit previously clocked hours.</p>
+				</div>
+			</article>
+		</div>
+	</section>
 </body>
-<footer>
-	<script src="carousel.js"></script>
-</footer>
 </html>

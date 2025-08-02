@@ -1,5 +1,4 @@
 ﻿:root {
-	
 	--primary-color: #e7e7e7;
 	--primary-color-complemenent: #1c4ba3;
 	--secondary-color: #d3d3d3;
@@ -17,11 +16,10 @@
 	padding: 0;
 }
 
-body {
+html {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	font-size: 16px;
 	min-height: 100vh;
 	background-color: var(--primary-color);
 }
@@ -29,7 +27,7 @@ body {
 h1 {
 	color: var(--header-color);
 	font-family: var(--header-font);
-	font-size: 6rem;
+	font-size: clamp(4rem, 2vw + 4rem, 12rem);;
 	text-align: center;
 }
 
@@ -70,7 +68,8 @@ media {
 	position: relative;
 	align-items: center;
 	justify-content: center;
-	top: 30%;
+	top: 50%;
+	translate: 0 -50%;
 }
 
 #scroll-indicator {
@@ -84,15 +83,32 @@ media {
 	animation: slight-hover 1.5s none infinite;
 }
 
-.content-container {
+.project-container {
+	display: block;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+
+	min-height: 100vh;
+
 	padding-left: 7%;
 	padding-right: 7%;
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 }
 
-.project-container {
-	display: block;
+section h2 {
+	align-self: center;
+
+	background-color: white;
+	border-radius: 2rem;
+	box-shadow: 1px 1px 5px 0px #000000 inset;
+
+	width: 70%;
+	padding: 1rem;
+	margin: 1rem;
 }
 
 article {
@@ -101,18 +117,18 @@ article {
 	margin: 1rem;
 	height: fit-content;
 	font-size: 1rem;
-	width: 90%;
+	width: 70%;
 	margin-left: auto;
 	margin-right: auto;
-	border-radius: 5px;
-	box-shadow: 1px 1px 5px 0px #000000;
+	border-radius: 2rem;
+	box-shadow: 1px 1px 5px 0px #000000 inset;
 	overflow: hidden;
 	display: grid;
 	grid-template-columns: auto 1fr;
 	gap: 1rem;
 }
 
-article media {
+article .media-container {
 	display: flex;
 	justify-content: center;
 	margin-right: 1rem;
@@ -146,6 +162,7 @@ img.slide-out {
 .description-container {
 	grid-column: 2;
 	align-self: center;
+	padding: 2rem;
 }
 
 article > h1,
