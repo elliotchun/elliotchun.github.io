@@ -28,3 +28,17 @@ function bindCarouselUpdateFunction(carousel) {
 		}
 	}
 }
+
+document.querySelectorAll('.image-carousel-right-button').forEach((button) => {
+	button.addEventListener('click', (event) => {
+		const carousel = event.target.nextElementSibling;
+		carousel.scrollBy({ left: window.innerWidth / 60, behavior: 'smooth' });
+	});
+});
+
+document.querySelectorAll('.image-carousel-left-button').forEach((button) => {
+	button.addEventListener('click', (event) => {
+		const carousel = event.target.nextElementSibling.nextElementSibling;
+		carousel.scrollBy({ left: -window.innerWidth / 60, behavior: 'smooth' });
+	});
+});

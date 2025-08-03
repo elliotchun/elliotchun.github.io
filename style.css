@@ -132,7 +132,12 @@ article {
 	gap: 1rem;
 }
 
+article:not(.visible) {
+	opacity: 0;
+}
+
 article.visible {
+	opacity: 1;
 	animation: slide-from-right 0.5s;
 }
 
