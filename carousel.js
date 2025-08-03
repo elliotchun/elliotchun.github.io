@@ -1,37 +1,30 @@
-// const imageCarousels = document.querySelectorAll('.image-carousel');
-// imageCarousels.forEach(carousel => {
-// 	const images = carousel.querySelectorAll('img');
-// 	let currentIndex = 0;
+const carousels = document.querySelectorAll('.image-carousel');
+carousels.forEach((carousel) => {
 
-// 	const showImage = (index) => {
-// 		let oldImage, newImage;
+	const updateCarouselState = bindCarouselUpdateFunction(carousel);
 
-// 		images.forEach((image, i) => {
-// 			if (i === index) {
-// 				image.classList.remove('slide-out');
-// 				image.classList.add('slide-in');
-// 				newImage = image;
-// 			}
-// 			else {
-// 				image.classList.remove('slide-in');
-// 				image.classList.add('slide-out');
-// 				oldImage = image;
-// 			}
-// 		});
+	updateCarouselState();
+	carousel.addEventListener('scroll', updateCarouselState);
+	window.addEventListener('resize', updateCarouselState);
+});
 
-// 		setTimeout(() => {
-// 			if (oldImage) oldImage.style.display = 'none';
-// 			if (newImage) newImage.style.display = 'block';
-// 		}, 500);
-// 	};
+function bindCarouselUpdateFunction(carousel) {
+	return () => {
+		const scrollLeft = carousel.scrollLeft;
+		const scrollWidth = carousel.scrollWidth;
+		const clientWidth = carousel.clientWidth;
 
-// 	const nextImage = () => {
-// 		++currentIndex;
-// 		currentIndex %= images.length;
-// 		showImage(currentIndex);
-// 	}
-	
-// 	showImage(currentIndex);
-// 	setInterval(nextImage, 5000);
-// });
+		if (scrollLeft > 0) {
+			carousel.classList.add('scrollable-left');
+		}
+		else {
+			carousel.classList.remove('scrollable-left');
+		}
 
+		if (scrollWidth - clientWidth > scrollLeft) {
+			carousel.classList.add('scrollable-right');
+		} else {
+			carousel.classList.remove('scrollable-right');
+		}
+	}
+}
