@@ -70,6 +70,7 @@ nav ~ section.content-column.visible {
 
 nav > h2 {
 	cursor: pointer;
+	text-decoration: underline;
 }
 
 h1 {
@@ -81,6 +82,7 @@ h1 {
 }
 
 h2 {
+	text-align: center;
 	color: var(--header-color);
 	font-family: var(--header-font);
 	font-size: 2rem;
@@ -91,7 +93,6 @@ h3 {
 	font-family: var(--header-font);
 	font-size: 24px;
 	text-align: center;
-	padding-bottom: 0.5rem;
 }
 
 p {
@@ -101,10 +102,10 @@ p {
 }
 
 article {
-	background-color: white;
+	background-color: ghostwhite;
 	padding: 1rem;
-	margin: 1rem;
-	height: fit-content;
+	margin: 4rem;
+	height: 20vh;
 	font-size: 1rem;
 	width: 70%;
 	margin-left: auto;
@@ -112,25 +113,34 @@ article {
 	border-radius: 2rem;
 	box-shadow: 1px 1px 5px 0px #000000 inset;
 	overflow: hidden;
-	display: grid;
-	grid-template-columns: auto 1fr;
-	gap: 1rem;
-}
-
-article .media-container {
 	display: flex;
-	justify-content: center;
-	margin-right: 1rem;
-	box-shadow: 0px 0px 3px 0px #000000;
-	grid-column: 1;
-	align-self: center;
-}
+	flex-direction: row;
 
-article img {
-	display: block;
-	margin: 0 auto;
-	box-shadow: 0px 0px 3px 0px #000000;
-}
+	transition: height 0.5s;
+
+	h3 {
+		align-self: center;
+	}
+
+	.media-container {
+		display: flex;
+		justify-content: center;
+		margin-right: 1rem;
+		box-shadow: 0px 0px 3px 0px #000000;
+		align-self: center;
+	}
+
+	.description-container {
+		align-self: center;
+		padding: 2rem;
+	}
+
+	img {
+		display: block;
+		margin: 0 auto;
+		box-shadow: 0px 0px 3px 0px #000000;
+	}
+}r
 
 .image-carousel {
 	position: relative;
@@ -175,19 +185,6 @@ img.slide-in {
 img.slide-out {
   animation: slide-to-left 0.5s ease-in-out;
 }
-
-.description-container {
-	grid-column: 2;
-	align-self: center;
-	padding: 2rem;
-}
-
-article > h1,
-article > h2,
-article > h3 {
-	grid-column: 1 / -1;
-}
-
 
 #contact {
 	display: flex;
