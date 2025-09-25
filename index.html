@@ -2,188 +2,187 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Elliot Chun's Website</title>
-  <link rel="icon" type="image/png" href="icon.png">
-  <link rel="stylesheet" href="style.css">
-  <script src="theme.js" defer></script>
-  <script src="scroll.js" defer></script>
-  <script src="carousel.js" defer></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Elliot Chun's Website</title>
+	<link rel="icon" type="image/png" href="icon.png">
+	<link rel="stylesheet" href="style.css">
+	<script src="scroll.js" defer></script>
+	<script src="carousel.js" defer></script>
 </head>
 
 <body>
-  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-    <span id="themeIcon">🌙</span>
-  </button>
+	<header id="home">
+		<h1 id="name-header">Elliot Chun</h1>
+		<p class="subtitle">Full-Stack Developer & Software Engineer</p>
+	</header>
+	<nav>
+		<a href="#projects">
+			<button data-target="projects">Projects</button>
+		</a>
+		<a href="#experience">
+			<button data-target="experience">Experience</button>
+		</a>
+	</nav>
+	<main>
+		<section id="projects" class="fade-in">
+			<div class="section-header">
+				<h2>Featured Projects</h2>
+			</div>
+			<div class="portfolio-grid">
+				<div class="portfolio-column">
+					<article class="portfolio-item fade-in stagger-1">
+						<h3>LLM Context Enhancement</h3>
+						<p>Enhancement of an LLM to expand its domain expertise with specialized knowledge.</p>
+						<div class="tech-stack">
+							<span class="tech-tag">Python</span>
+							<span class="tech-tag">LangChain</span>
+							<span class="tech-tag">ChromaDB</span>
+							<span class="tech-tag">LLMs</span>
+						</div>
+						<p><a href="https://github.com/elliotchun/rag-llm-enhancement">View Source Code</a></p>
+					</article>
+					<article class="portfolio-item fade-in stagger-4">
+						<h3>IMDB Movie Classification</h3>
+						<p>Machine learning project for movie review sentiment analysis using multiple prediction
+							models.</p>
+						<div class="tech-stack">
+							<span class="tech-tag">Python</span>
+							<span class="tech-tag">scikit-learn</span>
+							<span class="tech-tag">Pandas</span>
+							<span class="tech-tag">NumPy</span>
+							<span class="tech-tag">PyTorch</span>
+							<span class="tech-tag">NLTK</span>
+						</div>
+						<p><a href="https://github.com/Shaylee-Coulter/CS178GroupProject/blob/eschun/">View Source
+								Code</a></p>
+					</article>
+					<article class="portfolio-item fade-in stagger-2">
+						<h3>Digital Marketplace Analyzer</h3>
+						<p>A Python software suite for automatically fetching market information. Allows users to browse
+							and analyze
+							listings in real time and predicts prices using various prediction models.</p>
+						<div class="tech-stack">
+							<span class="tech-tag">Python</span>
+							<span class="tech-tag">HTTP</span>
+							<span class="tech-tag">Statistics</span>
+							<span class="tech-tag">PyTorch</span>
+							<span class="tech-tag">Machine Learning</span>
+						</div>
+						<p><a href="https://github.com/elliotchun/wf-market-tool">View Source Code</a></p>
+					</article>
+				</div>
+				<div class="portfolio-column">
+					<article class="portfolio-item fade-in stagger-2">
+						<h3>CLIDE Campus Platform</h3>
+						<p>A comprehensive cross-platform application that helps users coordinate, market, and browse
+							campus
+							activities.
+						</p>
+						<div class="tech-stack">
+							<span class="tech-tag">Figma</span>
+							<span class="tech-tag">React</span>
+							<span class="tech-tag">Tailwind</span>
+							<span class="tech-tag">TypeScript</span>
+							<span class="tech-tag">UI/UX Design</span>
+							<span class="tech-tag">Frontend</span>
+						</div>
+						<p><a href="https://heartfelt-empanada-88810e.netlify.app/">View App</a></p>
+						<p><a href="https://github.com/elliotchun/clide-campus-groups">View Source Code</a></p>
+					</article>
+					<article class="portfolio-item fade-in stagger-1">
+						<h3>UCI Search Engine</h3>
+						<iframe src="https://www.youtube.com/embed/bJmg-3r0xXY" allowfullscreen=""></iframe>
+						<p>A sophisticated full-stack web application enabling document search across UCI Computer
+							Science websites,
+							featuring advanced indexing with duplicate detection, PageRank algorithm, and anchor text
+							extraction.</p>
+						<div class="tech-stack">
+							<span class="tech-tag">Angular</span>
+							<span class="tech-tag">TypeScript</span>
+							<span class="tech-tag">Golang</span>
+							<span class="tech-tag">Python</span>
+							<span class="tech-tag">AWS</span>
+							<span class="tech-tag">Node.js</span>
+							<span class="tech-tag">Bun</span>
+							<span class="tech-tag">Full-stack</span>
+						</div>
+						<p><a href="https://github.com/cjcho03/cjcho03-cs121_A3">View Source Code</a></p>
+					</article>
+				</div>
+				<div class="portfolio-column">
+					<article class="portfolio-item fade-in stagger-3">
+						<h3>Movie Database Web App</h3>
+						<p>A full-stack web application serving comprehensive movie information from a robust database
+							with cloud
+							deployment and containerization.</p>
+						<div class="tech-stack">
+							<span class="tech-tag">HTML/CSS</span>
+							<span class="tech-tag">Bootstrap</span>
+							<span class="tech-tag">JavaScript</span>
+							<span class="tech-tag">Java</span>
+							<span class="tech-tag">AWS</span>
+							<span class="tech-tag">Docker</span>
+							<span class="tech-tag">Kubernetes</span>
+							<span class="tech-tag">Full-stack</span>
+						</div>
+						<p><a href="https://hub.docker.com/r/eschun/cs122b-p5/">View Docker Hub</a></p>
+					</article>
+					<article class="portfolio-item fade-in stagger-3">
+						<h3>Wiki Software</h3>
+						<p>A web server that dynamically generates articles on the server-side from JSON data.</p>
+						<div class="tech-stack">
+							<span class="tech-tag">HTML/CSS</span>
+							<span class="tech-tag">TypeScript</span>
+							<span class="tech-tag">Elysia</span>
+							<span class="tech-tag">Node.js</span>
+							<span class="tech-tag">Backend</span>
+						</div>
+						<p><a href="https://github.com/elliotchun/relic-wiki-server">View Source Code</a></p>
+					</article>
+				</div>
+			</div>
+		</section>
 
-  <header id="home">
-    <h1 id="name-header">Elliot Chun</h1>
-    <p class="subtitle">Full-Stack Developer & Software Engineer</p>
-    <div class="scroll-indicator fade-out">
-      <span>Scroll to explore</span>
-      <div class="scroll-arrow">
-        <svg width="140" height="70" xmlns="http://www.w3.org/2000/svg" version="1.1">
-          <polyline points="20 20 70 50 120 20" stroke-linecap="round" fill="none" stroke-linejoin="round">
-        </svg>
-      </div>
-    </div>
-  </header>
-  <nav>
-    <a href="#projects">
-      <button data-target="projects">Projects</button>
-    </a>
-    <a href="#experience">
-      <button data-target="experience">Experience</button>
-    </a>
-  </nav>
-  <main>
-    <section id="projects" class="fade-in">
-      <div class="section-header">
-        <h2>Featured Projects</h2>
-      </div>
-      <div class="portfolio-grid">
-
-        <article class="portfolio-item fade-in stagger-1">
-          <h3>LLM Context Enhancement</h3>
-          <p>Enhancement of an LLM to expand its domain expertise with specialized knowledge.</p>
-          <div class="tech-stack">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">LangChain</span>
-            <span class="tech-tag">ChromaDB</span>
-            <span class="tech-tag">LLMs</span>
-          </div>
-          <p><a href="https://github.com/elliotchun/rag-llm-enhancement">View Source Code</a></p>
-        </article>
-
-        <article class="portfolio-item fade-in stagger-2">
-          <h3>CLIDE Campus Platform</h3>
-          <p>A comprehensive cross-platform application that helps users coordinate, market, and browse campus
-            activities.
-          </p>
-          <div class="tech-stack">
-            <span class="tech-tag">Figma</span>
-            <span class="tech-tag">React</span>
-			<span class="tech-tag">Tailwind</span>
-            <span class="tech-tag">TypeScript</span>
-            <span class="tech-tag">UI/UX Design</span>
-            <span class="tech-tag">Frontend</span>
-          </div>
-		  <p><a href="https://heartfelt-empanada-88810e.netlify.app/">View App</a></p>
-          <p><a href="https://github.com/elliotchun/clide-campus-groups">View Source Code</a></p>
-        </article>
-
-        <article class="portfolio-item fade-in stagger-3">
-          <h3>Movie Database Web App</h3>
-          <p>A full-stack web application serving comprehensive movie information from a robust database with cloud
-            deployment and containerization.</p>
-          <div class="tech-stack">
-            <span class="tech-tag">HTML/CSS</span>
-            <span class="tech-tag">Bootstrap</span>
-            <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">Java</span>
-            <span class="tech-tag">AWS</span>
-            <span class="tech-tag">Docker</span>
-            <span class="tech-tag">Kubernetes</span>
-            <span class="tech-tag">Full-stack</span>
-          </div>
-          <p><a href="https://hub.docker.com/r/eschun/cs122b-p5/">View Docker Hub</a></p>
-        </article>
-
-        <article class="portfolio-item fade-in stagger-4">
-          <h3>IMDB Movie Classification</h3>
-          <p>Machine learning project for movie review sentiment analysis using multiple prediction models.</p>
-          <div class="tech-stack">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">scikit-learn</span>
-            <span class="tech-tag">Pandas</span>
-            <span class="tech-tag">NumPy</span>
-            <span class="tech-tag">PyTorch</span>
-            <span class="tech-tag">NLTK</span>
-          </div>
-          <p><a href="https://github.com/Shaylee-Coulter/CS178GroupProject/blob/eschun/">View Source Code</a></p>
-        </article>
-
-        <article class="portfolio-item fade-in stagger-1">
-          <h3>UCI Search Engine</h3>
-          <iframe src="https://www.youtube.com/embed/bJmg-3r0xXY" allowfullscreen=""></iframe>
-          <p>A sophisticated full-stack web application enabling document search across UCI Computer Science websites,
-            featuring advanced indexing with duplicate detection, PageRank algorithm, and anchor text extraction.</p>
-          <div class="tech-stack">
-            <span class="tech-tag">Angular</span>
-            <span class="tech-tag">TypeScript</span>
-            <span class="tech-tag">Golang</span>
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">AWS</span>
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">Bun</span>
-            <span class="tech-tag">Full-stack</span>
-          </div>
-          <p><a href="https://github.com/cjcho03/cjcho03-cs121_A3">View Source Code</a></p>
-        </article>
-
-        <article class="portfolio-item fade-in stagger-3">
-          <h3>Wiki Software</h3>
-          <p>A web server that dynamically generates articles on the server-side from JSON data.</p>
-          <div class="tech-stack">
-            <span class="tech-tag">HTML/CSS</span>
-            <span class="tech-tag">TypeScript</span>
-            <span class="tech-tag">Elysia</span>
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">Backend</span>
-          </div>
-          <p><a href="https://github.com/elliotchun/relic-wiki-server">View Source Code</a></p>
-        </article>
-
-        <article class="portfolio-item fade-in stagger-2">
-          <h3>Digital Marketplace Analyzer</h3>
-          <p>A Python software suite for automatically fetching market information. Allows users to browse and analyze
-            listings in real time and predicts prices using various prediction models.</p>
-          <div class="tech-stack">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">HTTP</span>
-            <span class="tech-tag">Statistics</span>
-            <span class="tech-tag">PyTorch</span>
-            <span class="tech-tag">Machine Learning</span>
-          </div>
-          <p><a href="https://github.com/elliotchun/wf-market-tool">View Source Code</a></p>
-        </article>
-      </div>
-    </section>
-
-    <section id="experience" class="fade-in">
-      <div class="section-header">
-        <h2>Professional Experience</h2>
-      </div>
-      <div class="portfolio-grid">
-        <div class="portfolio-item fade-in stagger-1">
-          <h3>Beckman Laser Institute</h3>
-          <p>Dramatically improved OCT scan display performance from 10 fps to 100 fps through optimization techniques.
-            Developed a comprehensive Python alignment tool for enhanced precision in medical imaging applications.</p>
-          <div class="tech-stack">
-            <span class="tech-tag">.NET Framework</span>
-            <span class="tech-tag">C++</span>
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">UI/UX Design</span>
-            <span class="tech-tag">Performance Optimization</span>
-            <span class="tech-tag">Medical Imaging</span>
-            <span class="tech-tag">OCT Systems</span>
-          </div>
-        </div>
-        <div class="portfolio-item fade-in stagger-2">
-          <h3>Ambient Studios</h3>
-          <p>Enhanced mobile application user experience and optimized backend infrastructure for employee time tracking
-            systems, improving overall system efficiency and user satisfaction.</p>
-          <div class="tech-stack">
-            <span class="tech-tag">Mobile Development</span>
-            <span class="tech-tag">Backend Systems</span>
-            <span class="tech-tag">CX Enhancement</span>
-            <span class="tech-tag">Time Tracking</span>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+		<section id="experience" class="fade-in">
+			<div class="section-header">
+				<h2>Professional Experience</h2>
+			</div>
+			<div class="portfolio-grid">
+				<div>
+					<div class="portfolio-item fade-in stagger-1">
+						<h3>Beckman Laser Institute</h3>
+						<p>Dramatically improved OCT scan display performance from 10 fps to 100 fps through
+							optimization
+							techniques.
+							Developed a comprehensive Python alignment tool for enhanced precision in medical imaging
+							applications.</p>
+						<div class="tech-stack">
+							<span class="tech-tag">.NET Framework</span>
+							<span class="tech-tag">C++</span>
+							<span class="tech-tag">Python</span>
+							<span class="tech-tag">UI/UX Design</span>
+							<span class="tech-tag">Performance Optimization</span>
+							<span class="tech-tag">Medical Imaging</span>
+							<span class="tech-tag">OCT Systems</span>
+						</div>
+					</div>
+					<div class="portfolio-item fade-in stagger-2">
+						<h3>Ambient Studios</h3>
+						<p>Enhanced mobile application user experience and optimized backend infrastructure for employee
+							time tracking
+							systems, improving overall system efficiency and user satisfaction.</p>
+						<div class="tech-stack">
+							<span class="tech-tag">Mobile Development</span>
+							<span class="tech-tag">Backend Systems</span>
+							<span class="tech-tag">CX Enhancement</span>
+							<span class="tech-tag">Time Tracking</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
 </body>
 
 </html>
