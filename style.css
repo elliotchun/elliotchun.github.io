@@ -231,8 +231,11 @@ section.visible {
 		grid-auto-rows: 1fr;
 		grid-template-columns: 1fr 1fr 1fr;
 	}
-}
 
+	.portfolio-column-full {
+		grid-column: 1 / -1;
+	}
+}
 
 .portfolio-item {
 	background: color-mix(in srgb, var(--card-bg), transparent 80%);
@@ -293,6 +296,7 @@ section.visible {
 
 .portfolio-item a:hover {
 	color: var(--accent-hover);
+	text-decoration: underline;
 }
 
 .portfolio-item a:hover::after {
