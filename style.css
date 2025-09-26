@@ -15,12 +15,13 @@
 	--shadow-light: 0 4px 6px rgba(0, 0, 0, 0.05);
 	--shadow-medium: 0 10px 25px rgba(0, 0, 0, 0.08);
 	--shadow-heavy: 0 20px 40px rgba(0, 0, 0, 0.12);
-	--nav-bg: rgba(255, 255, 255, 0.9);
+	--nav-bg: rgba(255, 255, 255);
 	--tech-tag-bg: #0066cc;
 	--tech-tag-border: #0066cc;
 	--bg-radial-1: rgba(0, 176, 202, 0.4);
 	--bg-radial-2: rgba(240, 171, 0, 0.4);
 	--bg-radial-3: rgba(247, 141, 45, 0.4);
+	--ease-bounce: cubic-bezier(0.3, 0.8, 0.2, 2.5)
 }
 
 * {
@@ -62,7 +63,7 @@ header {
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
 	margin-bottom: 1rem;
-	animation: fadeInUp 1s ease-out forwards;
+	animation: fadeIn 1s ease-out forwards;
 }
 
 .subtitle {
@@ -71,7 +72,7 @@ header {
 	font-weight: 300;
 	margin-bottom: 2rem;
 	opacity: 0;
-	animation: fadeInUp 1s ease-out forwards 0.5s;
+	animation: fadeIn 1s ease-in-out forwards;
 }
 
 .scroll-indicator {
@@ -83,7 +84,7 @@ header {
 	color: var(--text-muted);
 	font-size: 0.9rem;
 	opacity: 0;
-	animation: fadeInUp 1s ease-out forwards 1s;
+	animation: fadeIn 1s ease-out forwards 1s, slideUp 1s ease-out forwards 1s;
 }
 
 .scroll-arrow {
@@ -118,46 +119,110 @@ header {
 	}
 }
 
-@keyframes fadeInUp {
+@keyframes slideUp {
 	from {
-		opacity: 0;
 		transform: translateY(30px);
 	}
 
 	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
 		opacity: 1;
+	}
+}
+
+@keyframes slideDown {
+	0% {
+		transform: translateY(-20px);
+	}
+
+	100% {
 		transform: translateY(0);
 	}
 }
 
 nav {
 	position: fixed;
-	top: 2rem;
-	right: 2rem;
+	top: 1rem;
+	left: 1rem;
 	z-index: 1000;
-	display: flex;
-	gap: 1rem;
-	background: color-mix(in srgb, var(--nav-bg), transparent 80%);
-	backdrop-filter: blur(10px);
-	border-radius: 50px;
-	padding: 0.5rem;
-	border: 1px solid var(--border-color);
-	transition: all 0.3s ease;
+	display: grid;
+	grid-auto-rows: repeat(1fr, 2);
+	grid-auto-columns: 1fr;
 }
 
-nav button {
-	padding: 0.75rem 1.5rem;
-	background: transparent;
+nav button:not(.visible):not(.nav-reveal) {
+	display: none;
+	opacity: 0;
+
+	animation: fadeIn 0.3s ease-out backwards;
+}
+
+nav button.visible {
+	padding: 1rem;
+	margin: 0.25rem 0;
+
+	background: var(--nav-bg);
 	color: var(--text-secondary);
-	border: none;
+
+	cursor: pointer;
+
+	width: 100%;
+	border: 1px solid var(--border-color);
 	border-radius: 25px;
 	font-size: 0.9rem;
-	font-weight: 500;
-	cursor: pointer;
-	transition: all 0.3s ease;
+
+	opacity: 1;
+
 	position: relative;
 	overflow: hidden;
+	z-index: 1;
+
+	animation: fadeIn 0.3s ease-out forwards, slideDown 0.3s var(--ease-bounce) forwards;
 }
+
+.nav-reveal {
+	border-radius: 50px;
+	padding: 0.75rem;
+	border: 1px solid var(--border-color);
+	cursor: pointer;
+	transition: all 0.3s ease;
+	z-index: 2;
+
+	background: var(--nav-bg);
+	
+
+	transition: height 0.1s, width 0.1s;
+}
+
+.nav-reveal.active {
+	height: 1.5rem;
+	width: 1.5rem;
+	font-size: 0.4rem;
+	color: transparent;
+	margin-bottom: 0.5rem;
+}
+
+.nav-reveal:not(.active) {
+	height: 4rem;
+	width: 4rem;
+	font-size: 1.2rem;
+	margin-top: 0.5rem;
+	margin-left: 0.5rem;
+	color: var(--text-secondary);
+}
+
+
+
+
 
 nav button:hover {
 	color: var(--text-primary);
@@ -356,9 +421,9 @@ section.visible {
 
 .fade-in {
 	opacity: 0;
-	transform: translateY(30px);
+	transform: translateY(20px);
 	--stagger-delay: 0s;
-	transition: opacity 0.6s ease var(--stagger-delay), transform 0.6s ease var(--stagger-delay), outline-color 0.3s ease 0s, box-shadow 0.3s ease 0s;
+	transition: opacity 0.6s ease var(--stagger-delay), transform 0.6s var(--ease-bounce) var(--stagger-delay), outline-color 0.3s ease 0s, box-shadow 0.3s ease 0s;
 }
 
 .fade-in.visible {

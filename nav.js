@@ -1,21 +1,9 @@
-const navButtons = document.querySelectorAll('nav button');
-const sections = document.querySelectorAll('section');
-navButtons.forEach(button => {
-	button.addEventListener('click', () => {
-		const targetId = button.getAttribute('data-target');
-		const targetSection = document.getElementById(targetId);
+const revealNav = document.querySelector('.nav-reveal');
+const navButtons = document.querySelectorAll('nav>a>button');
 
-		// Update active nav button
-		navButtons.forEach(btn => btn.classList.remove('active'));
-		button.classList.add('active');
-
-		// Show target section
-		sections.forEach(section => {
-			section.classList.remove('visible');
-		});
-		targetSection.classList.add('visible');
-
-		// Scroll to section
-		targetSection.scrollIntoView({ behavior: 'smooth' });
+revealNav.addEventListener('click', (event) => {
+	navButtons.forEach(button => {
+		button.classList.toggle('visible');
 	});
+	event.currentTarget.classList.toggle('active');
 });
