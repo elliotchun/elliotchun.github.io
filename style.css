@@ -416,11 +416,11 @@ section.visible {
 }
 
 .stagger-1 {
-	--stagger-delay: 0.1s;
+	--stagger-delay: 0.5s;
 }
 
 .stagger-2 {
-	--stagger-delay: 0.2s;
+	--stagger-delay: 0.4s;
 }
 
 .stagger-3 {
@@ -428,9 +428,9 @@ section.visible {
 }
 
 .stagger-4 {
-	--stagger-delay: 0.4s;
+	--stagger-delay: 0.2s;
 }
 
 .stagger-5 {
-	--stagger-delay: 0.5s;
+	--stagger-delay: 0.1s;
 }
