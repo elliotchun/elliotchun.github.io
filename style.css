@@ -1,14 +1,14 @@
 ﻿:root {
 	--primary-bg: #ffffff;
 	--secondary-bg: #f8f9fa;
-	--card-bg: #ffffff;
+	--card-bg: oklch(97.3% 0.071 103.193);
 
-	--accent-color: #0066cc;
-	--accent-hover: #0052a3;
+	--accent-color: oklch(54.6% 0.245 262.881);
+	--accent-hover: oklch(48.8% 0.243 264.376);
 
-	--complementary-color: #0083b3;
-	--complementary-color-light: #00b0ca;
-	--complementary-color-dark: #00639e;
+	--complementary-color: oklch(48.8% 0.243 264.376);
+	--complementary-color-light: oklch(62.3% 0.214 259.815);
+	--complementary-color-dark: oklch(37.9% 0.146 265.522);
 
 	--text-primary: #1a1a1a;
 	--text-secondary: #4a4a4a;
@@ -25,8 +25,8 @@
 	--nav-bg: rgba(255, 255, 255);
 	--nav-bg-active: var(--accent-color);
 
-	--tech-tag-bg: var(--accent-color);
-	--tech-tag-border: var(--accent-color);
+	--tech-tag-bg: var(--secondary-bg);
+	--tech-tag-border: var(--border-color);
 	--bg-radial-1: rgba(0, 176, 202, 0.4);
 	--bg-radial-2: rgba(240, 171, 0, 0.4);
 	--bg-radial-3: rgba(247, 141, 45, 0.4);
@@ -164,7 +164,7 @@ nav a:has(.nav-button:not(.visible)) {
 .nav-reveal {
 	padding: 0.75rem;
 	border: none;
-	background: var(--tech-tag-bg);
+	background: var(--accent-color);
 
 	cursor: pointer;
 	transition: all 0.3s ease;
@@ -182,7 +182,6 @@ nav a:has(.nav-button:not(.visible)) {
 }
 
 .nav-reveal.active {
-	background: var(--tech-tag-bg);
 	border-radius: 50px;
 	height: 3rem;
 	width: 3rem;
@@ -198,10 +197,10 @@ nav a:has(.nav-button:not(.visible)) {
 	padding: 1rem;
 	margin: 0.25rem 0 0.25rem 0.5rem;
 
-	background: var(--tech-tag-bg);
+	background: var(--accent-color);
 	color: var(--text-accent);
 
-	
+
 	border: none;
 	border-radius: 25px;
 	font-size: 0.9rem;
@@ -211,7 +210,7 @@ nav a:has(.nav-button:not(.visible)) {
 	z-index: 1;
 	overflow: hidden;
 
-	
+
 	opacity: 0;
 	transition: opacity 0.2s;
 }
@@ -268,9 +267,9 @@ section.visible {
 	bottom: -10px;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 60px;
-	height: 4px;
-	background: var(--accent-color);
+	width: 400px;
+	height: 2px;
+	background: var(--complementary-color-light);
 	border-radius: 2px;
 }
 
@@ -297,6 +296,7 @@ section.visible {
 
 .portfolio-item {
 	background: color-mix(in srgb, var(--card-bg), transparent 80%);
+	color: oklch(28.6% 0.066 53.813);
 	border-radius: 20px;
 	padding: 2rem;
 	outline: solid 1px var(--border-color);
@@ -317,28 +317,19 @@ section.visible {
 .portfolio-item h3 {
 	font-size: 1.5rem;
 	font-weight: 600;
-	color: var(--text-primary);
 	margin-bottom: 1rem;
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
 }
 
-.portfolio-item h3::before {
-	content: '|';
-	color: var(--accent-color);
-	font-size: 0.8em;
-	transition: transform 0.3s ease;
-}
-
 .portfolio-item p {
-	color: var(--text-primary);
 	margin-bottom: 1rem;
 	line-height: 1.6;
 }
 
 .portfolio-item a {
-	color: var(--accent-color);
+	color: var(--text-primary);
 	text-decoration: none;
 	font-weight: 500;
 	display: inline-flex;
@@ -379,13 +370,30 @@ section.visible {
 
 .tech-tag {
 	background: var(--tech-tag-bg);
-	color: var(--text-accent);
+	color: var(--text-muted);
 	padding: 0.25rem 0.75rem;
 	border-radius: 15px;
 	font-size: 0.8rem;
 	font-weight: 500;
 	border: 1px solid var(--tech-tag-border);
 	transition: all 0.3s ease;
+}
+
+.external-link {
+	width: fit-content;
+	background: var(--tech-tag-bg);
+	color: var(--text-primary);
+	padding: 0.25rem 0.75rem;
+	margin: 4px 0px;
+	border-radius: 15px;
+	font-size: 0.8rem;
+	font-weight: 500;
+	border: 1px solid var(--tech-tag-border);
+	transition: all 0.2s var(--ease-bounce);
+}
+
+.external-link:hover {
+	scale: 1.1;
 }
 
 @media (max-width: 768px) {
@@ -398,7 +406,8 @@ section.visible {
 		padding: 4rem 1rem;
 	}
 
-	.portfolio-column, .portfolio-column-full {
+	.portfolio-column,
+	.portfolio-column-full {
 		padding: 0;
 		margin: 0;
 	}
