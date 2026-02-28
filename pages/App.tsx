@@ -1,22 +1,11 @@
+import { Header } from "../components/Header"
+import { Nav } from "../components/Nav"
+
 export const App = () => {
     return (
         <>
-            <header id="home">
-                <h1 id="name-header">Elliot Chun</h1>
-                <p className="subtitle">Full-Stack Developer & Software Engineer</p>
-            </header>
-            <nav>
-                <button className="nav-reveal">≡</button>
-                <a href="#home">
-                    <button className="nav-button" data-target="home">Top of page</button>
-                </a>
-                <a href="#projects">
-                    <button className="nav-button" data-target="projects">Projects</button>
-                </a>
-                <a href="#experience">
-                    <button className="nav-button" data-target="experience">Experience</button>
-                </a>
-            </nav>
+            <Header></Header>
+            <Nav></Nav>
             <main>
                 <section id="projects" className="fade-in">
                     <div className="section-header">
