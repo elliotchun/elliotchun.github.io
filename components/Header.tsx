@@ -1,8 +1,15 @@
-export const Header = () => {
+interface HeaderProps extends React.HTMLAttributes<HTMLHeadElement> {
+    children: React.ReactNode;
+}
+
+export const Header = ({
+    children,
+    ...rest
+}: HeaderProps) => {
+
     return (
-        <header id="home">
-            <h1 id="name-header">Elliot Chun</h1>
-            <p className="subtitle">Full-Stack Developer & Software Engineer</p>
+        <header {...rest}>
+            {children}
         </header>
     );
 }

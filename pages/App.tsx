@@ -4,7 +4,10 @@ import { Nav } from "../components/Nav"
 export const App = () => {
     return (
         <>
-            <Header></Header>
+            <Header id="home">
+                <h1 id="name-header">Elliot Chun</h1>
+                <p className="subtitle">Full-Stack Developer & Software Engineer</p>
+            </Header>
             <Nav></Nav>
             <main>
                 <section id="projects" className="fade-in">
