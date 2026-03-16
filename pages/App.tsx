@@ -1,13 +1,16 @@
 import { Header } from "../components/Header"
 import { Nav } from "../components/Nav"
+import { Subtitle } from "../components/Subtitle"
 
 export const App = () => {
     return (
         <>
-            <Header id="home">
-                <h1 id="name-header">Elliot Chun</h1>
-                <p className="subtitle">Full-Stack Developer & Software Engineer</p>
+            <Header id="home" sz={1}>
+                Elliot Chun
             </Header>
+            <Subtitle>
+                Full-Stack Developer & AI Engineer
+            </Subtitle>
             <Nav></Nav>
             <main>
                 <section id="projects" className="fade-in">
