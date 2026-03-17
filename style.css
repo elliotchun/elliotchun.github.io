@@ -15,6 +15,7 @@
 	--black-1: #1a1a1a;
 
 	--gray-1: #bbbcbe;
+	--gray-4: #a5a6a8;
 	--gray-5: #5c626e;
 	--gray-6: #4a4a4a;
 
@@ -59,17 +60,28 @@ h3 {
 	background-clip: text;
 }
 
-.portfolio-item a {
+.external-link a {
 	color: blue;
 }
 
-.portfolio-item a::after {
+.external-link a::after {
 	content: '→';
 	text-decoration: none;
-	transition: transform 0.2s var(--ease-bounce);
+	margin-left: 6px;
+	transition: margin 0.2s var(--ease-bounce);
 }
 
-.portfolio-item a:hover::after {
+.external-link a:hover::after {
 	text-decoration: none;
-	transform: translateX(5px);
+	margin-left: 12px;
+}
+
+.nav-button {
+	background-color: unset;
+	border-radius: 1rem;
+	transition: background-color 0.2s linear;
+}
+
+.nav-button:hover {
+	background-color: var(--gray-4);
 }

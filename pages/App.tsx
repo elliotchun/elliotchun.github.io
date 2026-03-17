@@ -14,7 +14,7 @@ export const App = () => {
 
     return (
         <div className="grid grid-cols-10 grid-rows-1">
-            <div className="columns-1 bg-(--gray-1) rounded-4xl m-1 pl-2">
+            <div className="columns-1 bg-(--gray-1) rounded-4xl m-1 mb-12">
                 <Nav className="fixed mt-4" />
             </div>
             <div className="col-span-9">
