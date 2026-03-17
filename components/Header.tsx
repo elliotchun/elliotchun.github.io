@@ -1,5 +1,4 @@
 interface HeaderProps extends React.HTMLAttributes<HTMLHeadingElement> {
-    children: React.ReactNode;
     sz: number;
 }
 
@@ -20,6 +19,13 @@ export const Header = ({
             <h2 {...rest}>
                 {children}
             </h2>
+        )
+    }
+    else if (sz === 3) {
+        return (
+            <h3 {...rest}>
+                {children}
+            </h3>
         )
     }
     return (

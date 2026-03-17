@@ -1,5 +1,4 @@
 interface SubtitleProps extends React.HTMLAttributes<HTMLParagraphElement> {
-    children: React.ReactNode;
 }
 
 export const Subtitle = ({

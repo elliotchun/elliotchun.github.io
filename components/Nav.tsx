@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavButton } from "./NavButton";
+import { MdCircle, MdKeyboardArrowUp, MdSquare } from "react-icons/md";
 
 interface NavProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
 }
@@ -12,9 +13,9 @@ export const Nav = ({ ...rest }: NavProps) => {
     }
 
     const navItems = [
-        { href: "#home", label: "Top of page", target: "home" },
-        { href: "#projects", label: "Projects", target: "projects" },
-        { href: "#experience", label: "Experience", target: "experience" }
+        { href: "#home", label: "Top of page", target: "home", icon: MdKeyboardArrowUp },
+        { href: "#projects", label: "Projects", target: "projects", icon: MdSquare },
+        { href: "#experience", label: "Experience", target: "experience", icon: MdCircle },
     ];
 
     return (
@@ -34,6 +35,7 @@ export const Nav = ({ ...rest }: NavProps) => {
                     target={item.target}
                     isActive={active}
                 >
+                    <item.icon />
                     {item.label}
                 </NavButton>
             ))}
