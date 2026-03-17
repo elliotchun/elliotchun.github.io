@@ -20,7 +20,7 @@ export const PortfolioItem = ({
     ...rest
 }: PortfolioItemProps) => {
     return (
-        <article className="portfolio-item bg-(--yellow-1) rounded-4xl p-4 font-medium">
+        <article className="flex flex-col items-start portfolio-item bg-(--yellow-1) rounded-4xl p-4 font-medium">
             <Header sz={3}>{title}</Header>
             <p>{description}</p>
             {links.map((link, index) => (

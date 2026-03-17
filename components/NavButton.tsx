@@ -1,16 +1,14 @@
-interface NavButtonProps {
+interface NavButtonProps extends React.HTMLAttributes<HTMLAnchorElement> {
     href: string;
-    children: React.ReactNode;
-    target: string;
-    isActive: boolean;
+    isActive?: boolean;
 }
 
-export const NavButton = ({ href, target, children, isActive = false }: NavButtonProps) => {
+export const NavButton = ({ href, children, isActive = false, ...rest }: NavButtonProps) => {
     return (
         <a
             href={href}
             className={`nav-button ${isActive ? "visible" : ""}`}
-            target={target}
+            {...rest}
         >
             {children}
         </a>

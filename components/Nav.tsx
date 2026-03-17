@@ -13,27 +13,28 @@ export const Nav = ({ ...rest }: NavProps) => {
     }
 
     const navItems = [
-        { href: "#home", label: "Top of page", target: "home", icon: MdKeyboardArrowUp },
-        { href: "#projects", label: "Projects", target: "projects", icon: MdSquare },
-        { href: "#experience", label: "Experience", target: "experience", icon: MdCircle },
+        { href: "#home", label: "Top of page", icon: MdKeyboardArrowUp },
+        { href: "#projects", label: "Projects", icon: MdSquare },
+        { href: "#experience", label: "Experience", icon: MdCircle },
     ];
 
     return (
         <nav {...rest}>
-            <button
-                className={`nav-reveal ${active ? "active" : ""}`}
+            {/* <NavButton
+                href="#"
+                target=""
                 aria-label="Toggle navigation"
-                type="button"
+                className="flex items-center"
                 onClick={toggleNav}
             >
-                ≡
-            </button>
+                <span className="p-1">≡</span> Hide nav
+            </NavButton> */}
             {navItems.map((item, index) => (
                 <NavButton
                     key={index}
                     href={item.href}
-                    target={item.target}
                     isActive={active}
+                    className="flex flex-col items-center m-3"
                 >
                     <item.icon />
                     {item.label}
