@@ -1,5 +1,14 @@
 [
     {
+        "title": "Survey Sage",
+        "description": "AI-powered system written in TypeScript. Features an LLM Orchestrator and Data Extractor that creates controlled user-assistant chatbot interactions and analyzes chat message transcripts to collect survey data.",
+        "skills": [
+            "Python",
+            "TypeScript",
+            "LLMs"
+        ]
+    },
+    {
         "title": "LLM RAG Enhancement",
         "description": "Enhancement of an LLM to expand its domain expertise with specialized knowledge.",
         "skills": [
