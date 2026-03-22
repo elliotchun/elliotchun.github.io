@@ -1,6 +1,4 @@
-﻿@import "tailwindcss";
-
-:root {
+﻿:root {
 	--white-1: #ffffff;
 	--white-2: #e6e6e6;
 
@@ -50,17 +48,8 @@ h3 {
 	font-size: 2rem;
 }
 
-.name-header {
-	font-size: clamp(3rem, 8vw, 8rem);
-	font-weight: 700;
-	background: linear-gradient(0deg, var(--blue-4), var(--blue-5), var(--blue-3));
-	background-size: 200% 200%;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-clip: text;
-}
-
 .external-link a {
+	text-decoration: none;
 	color: blue;
 }
 
@@ -82,6 +71,126 @@ h3 {
 	transition: background-color 0.2s linear;
 }
 
+nav a {
+	color: black;
+	text-decoration: none;
+}
+
 .nav-button:hover {
 	background-color: var(--gray-4);
+}
+
+.rounded {
+	border-radius: 2rem;
+}
+
+.page-layout {
+	display: grid;
+	grid-template-columns: 10% 90%;
+	grid-template-rows: repeat(1, minmax(0, 1fr));
+	gap: 1rem;
+}
+
+.nav-container {
+	background-color: var(--gray-1);
+	margin: 0.25rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.nav {
+	position: sticky;
+	top: 1rem;
+	height: min-content;
+}
+
+.nav-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0.75rem;
+	padding: 0.5rem;
+}
+
+.main-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.main-header-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--white-2);
+	margin: 0.25rem;
+	padding: 1rem;
+}
+
+.name-header {
+	font-size: clamp(3rem, 8vw, 8rem);
+	font-weight: 700;
+	background: linear-gradient(0deg, var(--blue-4), var(--blue-5), var(--blue-3));
+	background-size: 200% 200%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.subtitle {
+	color: var(--gray-6);
+}
+
+.main-content {
+	padding: 1rem;
+}
+
+.medium {
+	font-weight: 500;
+}
+
+.semibold {
+	font-weight: 600;
+}
+
+.portfolio-column-container {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	grid-auto-rows: minmax(0, 1fr);
+	gap: 1rem;
+}
+
+.portfolio-column {
+	display: grid;
+	grid-auto-rows: min-content;
+	grid-template-columns: repeat(1, minmax(0, 1fr));
+	gap: 1rem;
+}
+
+.portfolio-item {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	background-color: var(--yellow-1);
+	padding: 1rem;
+}
+
+.portfolio-chip-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	font-size: 14px;
+	margin-top: 0.5rem;
+}
+
+.portfolio-chip {
+	background-color: var(--yellow-5);
+	border-radius: 0.5rem;
+	padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+}
+
+.experience-column-container {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 1rem;
 }

@@ -34,7 +34,7 @@ export const Nav = ({ ...rest }: NavProps) => {
                     key={index}
                     href={item.href}
                     isActive={active}
-                    className="flex flex-col items-center m-3 p-2"
+                    className="nav-item"
                 >
                     <item.icon />
                     {item.label}

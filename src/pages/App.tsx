@@ -13,24 +13,24 @@ export const App = () => {
     ]
 
     return (
-        <div className="grid grid-cols-10 grid-rows-1">
-            <div className="columns-1 bg-(--gray-1) rounded-4xl m-1 mb-12">
-                <Nav className="fixed mt-4" />
+        <div className="page-layout">
+            <div className="nav-container rounded">
+                <Nav className="nav" />
             </div>
-            <div className="col-span-9">
-                <div className="flex flex-col items-center bg-(--white-2) rounded-4xl m-1 p-4">
+            <div className="main-container">
+                <div className="main-header-container rounded">
                     <Header id="home" sz={1} className="name-header">
                         Elliot Chun
                     </Header>
-                    <Subtitle className="text-(--gray-6)">
+                    <Subtitle>
                         Full-Stack Developer & AI Engineer
                     </Subtitle>
                 </div>
-                <main className="p-4">
+                <main className="main-content">
                     <section id="projects">
-                        <Header sz={2} className="font-semibold">Featured Projects</Header>
-                        <div className="grid grid-cols-3 auto-rows-fr gap-4">
-                            <div className="grid auto-rows-min grid-cols-1 gap-4">
+                        <Header sz={2} className="semibold">Featured Projects</Header>
+                        <div className="portfolio-column-container">
+                            <div className="portfolio-column">
                                 {pItems0.map((pItem, i) => (
                                     <PortfolioItem
                                         title={pItem.title}
@@ -41,7 +41,7 @@ export const App = () => {
                                     />
                                 ))}
                             </div>
-                            <div className="grid auto-rows-min grid-cols-1 gap-4">
+                            <div className="portfolio-column">
                                 {pItems1.map((pItem, i) => (
                                     <PortfolioItem
                                         title={pItem.title}
@@ -52,7 +52,7 @@ export const App = () => {
                                     />
                                 ))}
                             </div>
-                            <div className="grid auto-rows-min grid-cols-1 gap-4">
+                            <div className="portfolio-column">
                                 {pItems2.map((pItem, i) => (
                                     <PortfolioItem
                                         title={pItem.title}
@@ -67,10 +67,10 @@ export const App = () => {
                     </section>
 
                     <section id="experience">
-                        <Header sz={2} className="font-semibold">
+                        <Header sz={2} className="semibold">
                             Professional Experience
                         </Header>
-                        <div className="grid grid-rows-3 gap-4">
+                        <div className="experience-column-container">
                             <PortfolioItem
                                 title="BLVSP Platform"
                                 description="Implemented an accessible directory of tools dedicated to indexing tools used by Blind and Low-Vision Software Professionals."

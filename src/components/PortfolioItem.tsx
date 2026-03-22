@@ -20,7 +20,7 @@ export const PortfolioItem = ({
     ...rest
 }: PortfolioItemProps) => {
     return (
-        <article className="flex flex-col items-start portfolio-item bg-(--yellow-1) rounded-4xl p-4 font-medium">
+        <article className="portfolio-item rounded medium">
             <Header sz={3}>{title}</Header>
             <p>{description}</p>
             {links.map((link, index) => (
@@ -30,9 +30,9 @@ export const PortfolioItem = ({
                     </a>
                 </div>
             ))}
-            <div className="flex flex-wrap gap-2 text-sm mt-2">
+            <div className="portfolio-chip-container">
                 {skills.map((skill, index) => (
-                    <span key={index} className="bg-(--yellow-5) rounded-lg px-3 py-1">{skill}</span>
+                    <span key={index} className="portfolio-chip">{skill}</span>
                 ))}
             </div>
         </article>
