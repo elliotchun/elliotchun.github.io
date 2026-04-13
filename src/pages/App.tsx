@@ -14,8 +14,8 @@ export const App = () => {
 
     return (
         <div className="page-layout">
-            <div className="nav-container rounded">
-                <Nav className="nav" />
+            <div className="nav-container">
+                <Nav className="nav rounded" />
             </div>
             <div className="main-container">
                 <div className="main-header-container rounded">

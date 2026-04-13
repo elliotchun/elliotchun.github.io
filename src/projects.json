@@ -6,6 +6,16 @@
             "Python",
             "TypeScript",
             "LLMs"
+        ],
+        "links": [
+            {
+                "href": "https://github.com/mindful-metrics/survey-sage",
+                "text": "View main monorepo"
+            },
+            {
+                "href": "https://github.com/mindful-metrics/training-notebooks",
+                "text": "View training notebooks"
+            }
         ]
     },
     {
